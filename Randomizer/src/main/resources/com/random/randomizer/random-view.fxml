@@ -1,98 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.random.randomizer.RandomController">
    <children>
-      <VBox prefHeight="200.0" prefWidth="150.0">
+      <HBox>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
          <children>
-            <Label text="Geography Traits" underline="true" />
-            <CheckBox mnemonicParsing="false" text="Barren Oceans" />
-            <CheckBox mnemonicParsing="false" text="Coast" />
-            <CheckBox mnemonicParsing="false" text="Continents" />
-            <CheckBox mnemonicParsing="false" text="Divide" />
-            <CheckBox mnemonicParsing="false" text="Islands" />
-            <CheckBox mnemonicParsing="false" text="Land" />
-            <CheckBox mnemonicParsing="false" text="Lava Divide" />
-            <CheckBox mnemonicParsing="false" text="Lava Lakes" />
-            <CheckBox mnemonicParsing="false" text="Scarred Divide" />
-            <Button contentDisplay="CENTER" mnemonicParsing="false" prefWidth="50.0" text="Roll">
-               <VBox.margin>
-                  <Insets left="50.0" top="10.0" />
-               </VBox.margin>
-            </Button>
-            <TextField>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </TextField>
+            <TabPane prefHeight="250.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab text="Randomizer">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="200.0">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" text="Roll Geography" />
+                                    <CheckBox mnemonicParsing="false" text="Roll Climate" />
+                                    <CheckBox mnemonicParsing="false" text="Roll Inhabitants" />
+                                    <CheckBox mnemonicParsing="false" text="Roll Presence" />
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="104.0" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ChoiceBox fx:id="miscOne" prefWidth="150.0" />
+                                    <ChoiceBox fx:id="miscTwo" prefWidth="150.0" />
+                                    <ChoiceBox fx:id="miscThree" prefWidth="150.0" />
+                                    <ChoiceBox fx:id="miscFour" prefWidth="150.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Geography Traits">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="125.0">
+                                       <children>
+                                          <Label text="Geography Traits" underline="true" />
+                                          <CheckBox mnemonicParsing="false" text="Barren Oceans" />
+                                          <CheckBox mnemonicParsing="false" text="Coast" />
+                                          <CheckBox mnemonicParsing="false" text="Continents" />
+                                          <CheckBox mnemonicParsing="false" text="Divide" />
+                                          <CheckBox mnemonicParsing="false" text="Islands" />
+                                          <CheckBox mnemonicParsing="false" text="Land" />
+                                          <CheckBox mnemonicParsing="false" text="Lava Divide" />
+                                          <CheckBox mnemonicParsing="false" text="Lava Lakes" />
+                                          <CheckBox mnemonicParsing="false" text="Scarred Divide" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="1.0" />
+                           </padding>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                <Tab text="Climate Traits">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <Label text="Climate Traits" underline="true" />
+                                          <CheckBox mnemonicParsing="false" text="Desert Realm" />
+                                          <CheckBox mnemonicParsing="false" text="Endless Fields" />
+                                          <CheckBox mnemonicParsing="false" text="Forming Realms" />
+                                          <CheckBox mnemonicParsing="false" text="Frozen Realm" />
+                                          <CheckBox mnemonicParsing="false" text="Highlands" />
+                                          <CheckBox mnemonicParsing="false" text="Overgrown Realm" />
+                                          <CheckBox mnemonicParsing="false" text="Scorched Climate" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Presence Traits">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <Label text="Presence Traits" underline="true" />
+                                          <CheckBox mnemonicParsing="false" text="Pretender Kings" />
+                                          <CheckBox mnemonicParsing="false" text="Domain of the Frost Queen" />
+                                          <CheckBox mnemonicParsing="false" text="Artisan Kings" />
+                                          <CheckBox mnemonicParsing="false" text="Druidic Alliance" />
+                                          <CheckBox mnemonicParsing="false" text="The Librarian" />
+                                          <CheckBox mnemonicParsing="false" text="Iron Emperor" />
+                                          <CheckBox mnemonicParsing="false" text="Archon Prophet" />
+                                          <CheckBox mnemonicParsing="false" text="Demon Prince" />
+                                          <CheckBox mnemonicParsing="false" text="The Ashen War" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Inhabitant Traits">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <Label text="Inhabitants Traits" underline="true" />
+                                          <CheckBox mnemonicParsing="false" text="Astral Invaders" />
+                                          <CheckBox mnemonicParsing="false" text="Demonic Realm" />
+                                          <CheckBox mnemonicParsing="false" text="Dragon Territories" />
+                                          <CheckBox mnemonicParsing="false" text="Immortal Spirits" />
+                                          <CheckBox mnemonicParsing="false" text="Lingering Creators" />
+                                          <CheckBox mnemonicParsing="false" text="Low Population" />
+                                          <CheckBox mnemonicParsing="false" text="Magic Origins" />
+                                          <CheckBox mnemonicParsing="false" text="Megafauna" />
+                                          <CheckBox mnemonicParsing="false" text="Peaceful Lands" />
+                                          <CheckBox mnemonicParsing="false" text="Rampant Flora" />
+                                          <CheckBox mnemonicParsing="false" text="Rampant Undeath" />
+                                          <CheckBox mnemonicParsing="false" text="Wildlands" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Enviromental Effects">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <Label text="Environmental effects" underline="true" />
+                                          <CheckBox mnemonicParsing="false" text="Arctic Blizzards" />
+                                          <CheckBox mnemonicParsing="false" text="Crystalline Abundance" />
+                                          <CheckBox mnemonicParsing="false" text="Domain of Mayhem" />
+                                          <CheckBox mnemonicParsing="false" text="Massive Underground" />
+                                          <CheckBox mnemonicParsing="false" text="Small Underground" />
+                                          <CheckBox mnemonicParsing="false" text="Volcanic Eruptions" />
+                                          <CheckBox mnemonicParsing="false" text="Warping Wilds" />
+                                          <CheckBox mnemonicParsing="false" text="Wondrous Past" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Free City Modifiers">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <VBox prefWidth="125.0">
+                                       <children>
+                                          <Label text="Free city modifiers" underline="true" />
+                                          <CheckBox mnemonicParsing="false" text="Bannerlords" />
+                                          <CheckBox mnemonicParsing="false" text="City States" />
+                                          <CheckBox mnemonicParsing="false" text="Distrusting Locals" />
+                                          <CheckBox mnemonicParsing="false" text="Hostile Houses" />
+                                          <CheckBox mnemonicParsing="false" text="Might Makes Right" />
+                                          <CheckBox mnemonicParsing="false" text="No Free Cities" />
+                                          <CheckBox mnemonicParsing="false" text="Ruined Realm" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Rule Modifiers">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <Label text="Rule modifiers" underline="true" />
+                                          <CheckBox mnemonicParsing="false" text="Deathcasting" />
+                                          <CheckBox mnemonicParsing="false" text="Disdain for Evil" />
+                                          <CheckBox mnemonicParsing="false" text="Megacities" />
+                                          <CheckBox mnemonicParsing="false" text="No Respite" />
+                                          <CheckBox mnemonicParsing="false" text="Regenerating Infestations" />
+                                          <CheckBox mnemonicParsing="false" text="Underground Start" />
+                                          <CheckBox mnemonicParsing="false" text="Unlimited Power" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Unit Modifiers">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <Label text="Unit modifiers" underline="true" />
+                                          <CheckBox mnemonicParsing="false" text="Curse of Undeath" />
+                                          <CheckBox mnemonicParsing="false" text="Frostling Influence" />
+                                          <CheckBox mnemonicParsing="false" text="Gigantism" />
+                                          <CheckBox mnemonicParsing="false" text="High Maintenance" />
+                                          <CheckBox mnemonicParsing="false" text="Immortals" />
+                                          <CheckBox mnemonicParsing="false" text="Lightless" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
          </children>
-         <HBox.margin>
-            <Insets left="5.0" />
-         </HBox.margin>
-      </VBox>
-      <VBox prefHeight="200.0" prefWidth="150.0">
-         <HBox.margin>
-            <Insets left="5.0" />
-         </HBox.margin>
-         <children>
-            <Label text="Climate Traits" underline="true" />
-            <CheckBox mnemonicParsing="false" text="Desert Realm" />
-            <CheckBox mnemonicParsing="false" text="Endless Fields" />
-            <CheckBox mnemonicParsing="false" text="Forming Realms" />
-            <CheckBox mnemonicParsing="false" text="Frozen Realm" />
-            <CheckBox mnemonicParsing="false" text="Highlands" />
-            <CheckBox mnemonicParsing="false" text="Overgrown Realm" />
-            <CheckBox mnemonicParsing="false" text="Scorched Climate" />
-            <Button mnemonicParsing="false" text="Roll">
-               <VBox.margin>
-                  <Insets left="50.0" top="44.0" />
-               </VBox.margin>
-            </Button>
-            <TextField>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </TextField>
-         </children>
-      </VBox>
-      <VBox prefHeight="200.0" prefWidth="150.0">
-         <children>
-            <Label text="Inhabitants Traits" underline="true" />
-            <CheckBox mnemonicParsing="false" text="Astral Invaders" />
-            <CheckBox mnemonicParsing="false" text="Demonic Realm" />
-            <CheckBox mnemonicParsing="false" text="Dragon Territories" />
-            <CheckBox mnemonicParsing="false" text="Immortal Spirits" />
-            <CheckBox mnemonicParsing="false" text="Lingering Creators" />
-            <CheckBox mnemonicParsing="false" text="Low Population" />
-            <CheckBox mnemonicParsing="false" text="Magic Origins" />
-            <CheckBox mnemonicParsing="false" text="Megafauna" />
-            <CheckBox mnemonicParsing="false" text="Peaceful Lands" />
-            <CheckBox mnemonicParsing="false" text="Rampant Flora" />
-            <CheckBox mnemonicParsing="false" text="Rampant Undeath" />
-            <CheckBox mnemonicParsing="false" text="Wildlands" />
-         </children>
-      </VBox>
-      <VBox prefHeight="200.0" prefWidth="150.0">
-         <children>
-            <Label text="Presence Traits" underline="true" />
-            <CheckBox mnemonicParsing="false" text="Pretender Kings" />
-            <CheckBox mnemonicParsing="false" text="Domain of the Frost Queen" />
-            <CheckBox mnemonicParsing="false" text="Artisan Kings" />
-            <CheckBox mnemonicParsing="false" text="Druidic Alliance" />
-            <CheckBox mnemonicParsing="false" text="The Librarian" />
-            <CheckBox mnemonicParsing="false" text="Iron Emperor" />
-            <CheckBox mnemonicParsing="false" text="Archon Prophet" />
-            <CheckBox mnemonicParsing="false" text="Demon Prince" />
-            <CheckBox mnemonicParsing="false" text="The Ashen War" />
-         </children>
-      </VBox>
+      </HBox>
    </children>
-</HBox>
+</VBox>
