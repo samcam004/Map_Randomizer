@@ -1,16 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.random.randomizer.RandomController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="150.0">
+         <children>
+            <Label text="Geography Traits" underline="true" />
+            <CheckBox mnemonicParsing="false" text="Barren Oceans" />
+            <CheckBox mnemonicParsing="false" text="Coast" />
+            <CheckBox mnemonicParsing="false" text="Continents" />
+            <CheckBox mnemonicParsing="false" text="Divide" />
+            <CheckBox mnemonicParsing="false" text="Islands" />
+            <CheckBox mnemonicParsing="false" text="Land" />
+            <CheckBox mnemonicParsing="false" text="Lava Divide" />
+            <CheckBox mnemonicParsing="false" text="Lava Lakes" />
+            <CheckBox mnemonicParsing="false" text="Scarred Divide" />
+            <Button contentDisplay="CENTER" mnemonicParsing="false" prefWidth="50.0" text="Roll">
+               <VBox.margin>
+                  <Insets left="50.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <TextField>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+         <HBox.margin>
+            <Insets left="5.0" />
+         </HBox.margin>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="150.0">
+         <HBox.margin>
+            <Insets left="5.0" />
+         </HBox.margin>
+         <children>
+            <Label text="Climate Traits" underline="true" />
+            <CheckBox mnemonicParsing="false" text="Desert Realm" />
+            <CheckBox mnemonicParsing="false" text="Endless Fields" />
+            <CheckBox mnemonicParsing="false" text="Forming Realms" />
+            <CheckBox mnemonicParsing="false" text="Frozen Realm" />
+            <CheckBox mnemonicParsing="false" text="Highlands" />
+            <CheckBox mnemonicParsing="false" text="Overgrown Realm" />
+            <CheckBox mnemonicParsing="false" text="Scorched Climate" />
+            <Button mnemonicParsing="false" text="Roll">
+               <VBox.margin>
+                  <Insets left="50.0" top="44.0" />
+               </VBox.margin>
+            </Button>
+            <TextField>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="150.0">
+         <children>
+            <Label text="Inhabitants Traits" underline="true" />
+            <CheckBox mnemonicParsing="false" text="Astral Invaders" />
+            <CheckBox mnemonicParsing="false" text="Demonic Realm" />
+            <CheckBox mnemonicParsing="false" text="Dragon Territories" />
+            <CheckBox mnemonicParsing="false" text="Immortal Spirits" />
+            <CheckBox mnemonicParsing="false" text="Lingering Creators" />
+            <CheckBox mnemonicParsing="false" text="Low Population" />
+            <CheckBox mnemonicParsing="false" text="Magic Origins" />
+            <CheckBox mnemonicParsing="false" text="Megafauna" />
+            <CheckBox mnemonicParsing="false" text="Peaceful Lands" />
+            <CheckBox mnemonicParsing="false" text="Rampant Flora" />
+            <CheckBox mnemonicParsing="false" text="Rampant Undeath" />
+            <CheckBox mnemonicParsing="false" text="Wildlands" />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="150.0">
+         <children>
+            <Label text="Presence Traits" underline="true" />
+            <CheckBox mnemonicParsing="false" text="Pretender Kings" />
+            <CheckBox mnemonicParsing="false" text="Domain of the Frost Queen" />
+            <CheckBox mnemonicParsing="false" text="Artisan Kings" />
+            <CheckBox mnemonicParsing="false" text="Druidic Alliance" />
+            <CheckBox mnemonicParsing="false" text="The Librarian" />
+            <CheckBox mnemonicParsing="false" text="Iron Emperor" />
+            <CheckBox mnemonicParsing="false" text="Archon Prophet" />
+            <CheckBox mnemonicParsing="false" text="Demon Prince" />
+            <CheckBox mnemonicParsing="false" text="The Ashen War" />
+         </children>
+      </VBox>
+   </children>
+</HBox>
