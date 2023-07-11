@@ -1,16 +1,338 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.random.randomizer.RandomController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+<VBox xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.random.randomizer.RandomController">
+   <children>
+      <HBox>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <VBox>
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefWidth="100.0" text="Geography Trait">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label prefWidth="100.0" text="Climate Trait" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label prefWidth="100.0" text="Inhabitants Trait" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label prefWidth="100.0" text="Presence Traits" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <TextField GridPane.columnIndex="2" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </GridPane>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ChoiceBox fx:id="miscOne" prefWidth="150.0" />
+                        <ChoiceBox fx:id="miscTwo" prefWidth="150.0" GridPane.rowIndex="1" />
+                        <ChoiceBox fx:id="miscThree" prefWidth="150.0" GridPane.rowIndex="2" />
+                        <ChoiceBox fx:id="miscFour" prefWidth="150.0" GridPane.rowIndex="3" />
+                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <TextField GridPane.columnIndex="2" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+            </VBox>
+            <TabPane tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab text="Primary Map Traits">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0">
+                           <children>
+                              <VBox style="-fx-background-color: grey;">
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="125.0" style="-fx-background-color: d3d3d3;">
+                                             <children>
+                                                <Label text="Geography Traits" underline="true">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Barren Oceans" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Coast" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Continents" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Divide" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Islands" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Land" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Lava Divide" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Lava Lakes" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Scarred Divide" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox prefWidth="125.0" style="-fx-background-color: d3d3d3;">
+                                             <children>
+                                                <Label text="Climate Traits" underline="true" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Desert Realm" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Endless Fields" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Forming Realms" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Frozen Realm" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Highlands" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Overgrown Realm" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Scorched Climate" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </VBox>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <VBox prefWidth="125.0" style="-fx-background-color: d3d3d3;">
+                                             <children>
+                                                <Label text="Inhabitants Traits" underline="true" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Astral Invaders" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Demonic Realm" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Dragon Territories" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Immortal Spirits" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Lingering Creators" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Low Population" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Magic Origins" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Megafauna" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Peaceful Lands" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Rampant Flora" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Rampant Undeath" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Wildlands" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox prefWidth="125.0" style="-fx-background-color: d3d3d3;">
+                                             <children>
+                                                <Label text="Presence Traits" underline="true" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Pretender Kings" />
+                                                <CheckBox mnemonicParsing="false" prefWidth="100.0" selected="true" text="Domain of the Frost Queen" wrapText="true" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Artisan Kings" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Druidic Alliance" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="The Librarian" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Iron Emperor" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Archon Prophet" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Demon Prince" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="The Ashen War" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="1.0" />
+                           </padding>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Miscellaneous Traits">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-background-color: grey;">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <VBox prefWidth="125.0" style="-fx-background-color: d3d3d3;">
+                                             <children>
+                                                <Label text="Environmental effects" underline="true" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Arctic Blizzards" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Crystalline Abundance" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Domain of Mayhem" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Massive Underground" wrapText="true" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Small Underground" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Volcanic Eruptions" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Warping Wilds" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Wondrous Past" />
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox prefWidth="125.0" style="-fx-background-color: d3d3d3;">
+                                             <children>
+                                                <Label text="Free city modifiers" underline="true" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Bannerlords" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="City States" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Distrusting Locals" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Hostile Houses" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Might Makes Right" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="No Free Cities" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Ruined Realm" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <VBox prefWidth="125.0" style="-fx-background-color: d3d3d3;">
+                                             <children>
+                                                <Label text="Rule modifiers" underline="true" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Deathcasting" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Disdain for Evil" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Megacities" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="No Respite" />
+                                                <CheckBox mnemonicParsing="false" prefWidth="125.0" selected="true" text="Regenerating Infestations" wrapText="true" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Underground Start" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Unlimited Power" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox prefWidth="125.0" style="-fx-background-color: d3d3d3;">
+                                             <children>
+                                                <Label text="Unit modifiers" underline="true" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Curse of Undeath" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Frostling Influence" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Gigantism" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="High Maintenance" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Immortals" />
+                                                <CheckBox mnemonicParsing="false" selected="true" text="Lightless" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </HBox>
+   </children>
 </VBox>
