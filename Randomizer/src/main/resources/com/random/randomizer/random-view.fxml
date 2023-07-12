@@ -151,15 +151,15 @@
                                                       <Insets />
                                                    </VBox.margin>
                                                 </Label>
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Barren Oceans" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Coast" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Continents" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Divide" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Islands" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Land" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Lava Divide" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Lava Lakes" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Scarred Divide" />
+                                                <CheckBox fx:id="cbBarren" mnemonicParsing="false" onAction="#setCbBarren" selected="true" text="Barren Oceans" />
+                                                <CheckBox fx:id="cbCoast" mnemonicParsing="false" onAction="#setCbCoast" selected="true" text="Coast" />
+                                                <CheckBox fx:id="cbContinents" mnemonicParsing="false" onAction="#setCbContinents" selected="true" text="Continents" />
+                                                <CheckBox fx:id="cbDivide" mnemonicParsing="false" onAction="#setCbDivide" selected="true" text="Divide" />
+                                                <CheckBox fx:id="cbIslands" mnemonicParsing="false" selected="true" text="Islands" />
+                                                <CheckBox fx:id="cbLand" mnemonicParsing="false" selected="true" text="Land" />
+                                                <CheckBox fx:id="cbLavaDivide" mnemonicParsing="false" selected="true" text="Lava Divide" />
+                                                <CheckBox fx:id="cbLavaLake" mnemonicParsing="false" selected="true" text="Lava Lakes" />
+                                                <CheckBox fx:id="cbScarred" mnemonicParsing="false" selected="true" text="Scarred Divide" />
                                              </children>
                                              <HBox.margin>
                                                 <Insets left="5.0" top="5.0" />
@@ -238,9 +238,6 @@
                                  </padding>
                               </VBox>
                            </children>
-                           <padding>
-                              <Insets left="1.0" />
-                           </padding>
                         </AnchorPane>
                     </content>
                   </Tab>
