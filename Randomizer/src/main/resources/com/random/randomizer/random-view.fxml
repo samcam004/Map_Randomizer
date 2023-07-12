@@ -57,7 +57,7 @@
                               <Insets left="5.0" />
                            </GridPane.margin>
                         </Label>
-                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1">
+                        <Button fx:id="btnGeo" mnemonicParsing="false" onAction="#rollGeoTrait" text="Roll" GridPane.columnIndex="1">
                            <GridPane.margin>
                               <Insets left="5.0" />
                            </GridPane.margin>
@@ -77,7 +77,7 @@
                               <Insets left="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <TextField GridPane.columnIndex="2" />
+                        <TextField fx:id="tfGeoTrait" GridPane.columnIndex="2" />
                         <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
                         <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
                         <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
@@ -151,15 +151,15 @@
                                                       <Insets />
                                                    </VBox.margin>
                                                 </Label>
-                                                <CheckBox fx:id="cbBarren" mnemonicParsing="false" onAction="#setCbBarren" selected="true" text="Barren Oceans" />
-                                                <CheckBox fx:id="cbCoast" mnemonicParsing="false" onAction="#setCbCoast" selected="true" text="Coast" />
-                                                <CheckBox fx:id="cbContinents" mnemonicParsing="false" onAction="#setCbContinents" selected="true" text="Continents" />
-                                                <CheckBox fx:id="cbDivide" mnemonicParsing="false" onAction="#setCbDivide" selected="true" text="Divide" />
-                                                <CheckBox fx:id="cbIslands" mnemonicParsing="false" selected="true" text="Islands" />
-                                                <CheckBox fx:id="cbLand" mnemonicParsing="false" selected="true" text="Land" />
-                                                <CheckBox fx:id="cbLavaDivide" mnemonicParsing="false" selected="true" text="Lava Divide" />
-                                                <CheckBox fx:id="cbLavaLake" mnemonicParsing="false" selected="true" text="Lava Lakes" />
-                                                <CheckBox fx:id="cbScarred" mnemonicParsing="false" selected="true" text="Scarred Divide" />
+                                                <CheckBox fx:id="cbBarren" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Barren Oceans" />
+                                                <CheckBox fx:id="cbCoast" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Coast" />
+                                                <CheckBox fx:id="cbContinents" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Continents" />
+                                                <CheckBox fx:id="cbDivide" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Divide" />
+                                                <CheckBox fx:id="cbIslands" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Islands" />
+                                                <CheckBox fx:id="cbLand" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Land" />
+                                                <CheckBox fx:id="cbLavaDivide" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Lava Divide" />
+                                                <CheckBox fx:id="cbLavaLakes" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Lava Lakes" />
+                                                <CheckBox fx:id="cbScarred" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Scarred Divide" />
                                              </children>
                                              <HBox.margin>
                                                 <Insets left="5.0" top="5.0" />
@@ -168,13 +168,13 @@
                                           <VBox prefWidth="125.0" style="-fx-background-color: d3d3d3;">
                                              <children>
                                                 <Label text="Climate Traits" underline="true" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Desert Realm" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Endless Fields" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Forming Realms" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Frozen Realm" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Highlands" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Overgrown Realm" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Scorched Climate" />
+                                                <CheckBox fx:id="cbDesert" mnemonicParsing="false" selected="true" text="Desert Realm" />
+                                                <CheckBox fx:id="cbEndless" mnemonicParsing="false" selected="true" text="Endless Fields" />
+                                                <CheckBox fx:id="cbForming" mnemonicParsing="false" selected="true" text="Forming Realms" />
+                                                <CheckBox fx:id="cbFrozen" mnemonicParsing="false" selected="true" text="Frozen Realm" />
+                                                <CheckBox fx:id="cbHigh" mnemonicParsing="false" selected="true" text="Highlands" />
+                                                <CheckBox fx:id="cbOvergrown" mnemonicParsing="false" selected="true" text="Overgrown Realm" />
+                                                <CheckBox fx:id="cbScorched" mnemonicParsing="false" selected="true" text="Scorched Climate" />
                                              </children>
                                              <HBox.margin>
                                                 <Insets left="5.0" top="5.0" />

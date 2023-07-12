@@ -3,65 +3,115 @@ package com.random.randomizer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class RandomController implements Initializable {
 
     @FXML
-    private CheckBox cbBarren, cbCoast, cbContinents, cbDivide, cbIslands, cbLand, cbLavaDivide, cbLavaLake, cbScarred;
+    private CheckBox cbBarren, cbCoast, cbContinents, cbDivide, cbIslands, cbLand, cbLavaDivide, cbLavaLakes, cbScarred,
+                     cbDesert, cbEndless, cbForming, cbFrozen, cbHigh, cbOvergrown, cbScorched;
 
     @FXML
-    private void setCbBarren () {
-        if (cbBarren.isSelected()){
-            mainTraits.get(0).add("Barren Ocean");
-            System.out.println("Add Barren Ocean");
-        } else {
-            mainTraits.get(0).remove("Barren Ocean");
-            System.out.println("Remove Barren Ocean");
+    private TextField tfGeoTrait;
+
+    @FXML
+    private void setGeoTrait(ActionEvent e) {
+        if (e.getSource().equals(cbBarren)) {
+            if (cbBarren.isSelected()){
+                mainTraits.get(0).add("Barren Ocean");
+                System.out.println("Add Barren Ocean");
+            } else {
+                mainTraits.get(0).remove("Barren Ocean");
+                System.out.println("Remove Barren Ocean");
+            }
+        }
+        else if (e.getSource().equals(cbCoast)){
+            if (cbCoast.isSelected()) {
+                mainTraits.get(0).add("Coast");
+                System.out.println("Add Coast");
+            } else {
+                mainTraits.get(0).remove("Coast");
+                System.out.println("Remove Coast");
+            }
+        }
+        else if (e.getSource().equals(cbContinents)) {
+            if (cbContinents.isSelected()) {
+                mainTraits.get(0).add("Continents");
+                System.out.println("Add Continents");
+            } else {
+                mainTraits.get(0).remove("Continents");
+                System.out.println("Remove Continents");
+            }
+        }
+        else if (e.getSource().equals(cbDivide)) {
+            if (cbDivide.isSelected()) {
+                mainTraits.get(0).add("Divide");
+                System.out.println("Add Divide");
+            } else {
+                mainTraits.get(0).remove("Divide");
+                System.out.println("Remove Divide");
+            }
+        }
+        else if (e.getSource().equals(cbIslands)) {
+            if (cbIslands.isSelected()) {
+                mainTraits.get(0).add("Islands");
+                System.out.println("Add Islands");
+            } else {
+                mainTraits.get(0).remove("Islands");
+                System.out.println("Remove Islands");
+            }
+        }
+        else if (e.getSource().equals(cbLand)) {
+            if (cbLand.isSelected()) {
+                mainTraits.get(0).add("Land");
+                System.out.println("Add Land");
+            } else {
+                mainTraits.get(0).remove("Land");
+                System.out.println("Remove Land");
+            }
+
+        }
+        else if (e.getSource().equals(cbLavaDivide)) {
+            if (cbLavaDivide.isSelected()) {
+                mainTraits.get(0).add("Lava Divide");
+                System.out.println("Add Lava Divide");
+            } else {
+                mainTraits.get(0).remove("Lava Divide");
+                System.out.println("Remove Lava Divide");
+            }
+        }
+        else if (e.getSource().equals(cbLavaLakes)) {
+            if (cbLavaLakes.isSelected()) {
+                mainTraits.get(0).add("Lava Lakes");
+                System.out.println("Add Lava Lakes");
+            } else {
+                mainTraits.get(0).remove("Lava Lakes");
+                System.out.println("Remove Lava Lakes");
+            }
+
+        }
+        else {
+            if (cbScarred.isSelected()) {
+                mainTraits.get(0).add("Scarred Divide");
+                System.out.println("Add Scarred Divide");
+            } else {
+                mainTraits.get(0).remove("Scarred Divide");
+                System.out.println("Remove Scarred Divide");
+            }
         }
     }
 
     @FXML
-    private void setCbCoast () {
-        if (cbCoast.isSelected()) {
-            mainTraits.get(0).add("Coast");
-            System.out.println("Add Coast");
-        } else {
-            mainTraits.get(0).remove("Coast");
-            System.out.println("Remove Coast");
-        }
+    private void rollGeoTrait (ActionEvent roll) {
+        Random r = new Random();
+        tfGeoTrait.setText(mainTraits.get(0).get(r.nextInt(mainTraits.get(0).size())));
+
     }
-
-    @FXML
-    private void setCbContinents () {
-        if (cbContinents.isSelected()) {
-            mainTraits.get(0).add("Continents");
-            System.out.println("Add Continents");
-        } else {
-            mainTraits.get(0).remove("Continents");
-            System.out.println("Remove Continents");
-        }
-    }
-
-    @FXML
-    private void setCbDivide () {
-        if (cbDivide.isSelected()) {
-            mainTraits.get(0).add("Divide");
-            System.out.println("Add Divide");
-        } else {
-            mainTraits.get(0).remove("Divide");
-            System.out.println("Remove Divide");
-        }
-    }
-
-
 
     @FXML
     private ChoiceBox<String> miscOne;
