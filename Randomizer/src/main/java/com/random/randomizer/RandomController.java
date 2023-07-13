@@ -14,10 +14,15 @@ public class RandomController implements Initializable {
 
     @FXML
     private CheckBox cbBarren, cbCoast, cbContinents, cbDivide, cbIslands, cbLand, cbLavaDivide, cbLavaLakes, cbScarred,
-                     cbDesert, cbEndless, cbForming, cbFrozen, cbHigh, cbOvergrown, cbScorched;
+                     cbDesert, cbEndless, cbForming, cbFrozen, cbHigh, cbOvergrown, cbScorched,
+                     cbAstral, cbDemonic, cbDragon, cbImmortal, cbLingering, cbLowPop, cbMagic, cbMega, cbPeaceful, cbRampantFlora, cbRampantUndeath, cbWildlands,
+                     cbPretender, cbDomain, cbArtisan, cbDruidic, cbLibrarian, cbIron, cbArchon, cbDemonPrince, cbAshen;
 
     @FXML
-    private TextField tfGeoTrait;
+    private TextField tfGeo, tfClimate, tfInhab, tfPresence;
+    
+    @FXML
+    private Button btnGeo, btnClimate, btnInhab, btnPresence;
 
     @FXML
     private void setGeoTrait(ActionEvent e) {
@@ -107,9 +112,225 @@ public class RandomController implements Initializable {
     }
 
     @FXML
-    private void rollGeoTrait (ActionEvent roll) {
-        Random r = new Random();
-        tfGeoTrait.setText(mainTraits.get(0).get(r.nextInt(mainTraits.get(0).size())));
+    private void setClimateTrait(ActionEvent e) {
+        if (e.getSource().equals(cbDesert)) {
+            if (cbDesert.isSelected()){
+                mainTraits.get(1).add("Desert Realms");
+            } else {
+                mainTraits.get(1).remove("Desert Realms");
+            }
+        }
+        else if (e.getSource().equals(cbEndless)) {
+            if (cbEndless.isSelected()){
+                mainTraits.get(1).add("Endless Fields");
+            } else {
+                mainTraits.get(1).remove("Endless Fields");
+            }
+        }
+        else if (e.getSource().equals(cbForming)) {
+            if (cbForming.isSelected()){
+                mainTraits.get(1).add("Forming Realms");
+            } else {
+                mainTraits.get(1).remove("Forming Realms");
+            }
+        }
+        else if (e.getSource().equals(cbFrozen)) {
+            if (cbFrozen.isSelected()){
+                mainTraits.get(1).add("Frozen Realms");
+            } else {
+                mainTraits.get(1).remove("Frozen Realms");
+            }
+        }
+        else if (e.getSource().equals(cbHigh)) {
+            if (cbHigh.isSelected()){
+                mainTraits.get(1).add("Highlands");
+            } else {
+                mainTraits.get(1).remove("Highlands");
+            }
+        }
+        else if (e.getSource().equals(cbOvergrown)) {
+            if (cbOvergrown.isSelected()){
+                mainTraits.get(1).add("Overgrown Realm");
+            } else {
+                mainTraits.get(1).remove("Overgrown Realm");
+            }
+        }
+        else {
+            if (cbScorched.isSelected()){
+                mainTraits.get(1).add("Scorched Climate");
+            } else {
+                mainTraits.get(1).remove("Scorched Climate");
+            }
+        }
+    }
+
+    @FXML
+    private void setInhabTrait(ActionEvent e) {
+        if (e.getSource().equals(cbAstral)) {
+            if (cbAstral.isSelected()){
+                mainTraits.get(2).add("Astral Invaders");
+            } else {
+                mainTraits.get(2).remove("Astral Invaders");
+            }
+        }
+        else if (e.getSource().equals(cbDemonic)) {
+            if (cbDemonic.isSelected()){
+                mainTraits.get(2).add("Demonic Realm");
+            } else {
+                mainTraits.get(2).remove("Demonic Realm");
+            }
+        }
+        else if (e.getSource().equals(cbDragon)) {
+            if (cbDragon.isSelected()){
+                mainTraits.get(2).add("Dragon Territories");
+            } else {
+                mainTraits.get(2).remove("Dragon Territories");
+            }
+        }
+        else if (e.getSource().equals(cbImmortal)) {
+            if (cbImmortal.isSelected()){
+                mainTraits.get(2).add("Immortal Spirits");
+            } else {
+                mainTraits.get(2).remove("Immortal Spirits");
+            }
+        }
+        else if (e.getSource().equals(cbLingering)) {
+            if (cbLingering.isSelected()){
+                mainTraits.get(2).add("Lingering Creators");
+            } else {
+                mainTraits.get(2).remove("Lingering Creators");
+            }
+        }
+        else if (e.getSource().equals(cbLowPop)) {
+            if (cbLowPop.isSelected()){
+                mainTraits.get(2).add("Low Population");
+            } else {
+                mainTraits.get(2).remove("Low Population");
+            }
+        }
+        else if (e.getSource().equals(cbMagic)) {
+            if (cbMagic.isSelected()){
+                mainTraits.get(2).add("Magic Origins");
+            } else {
+                mainTraits.get(2).remove("Magic Origins");
+            }
+        }
+        else if (e.getSource().equals(cbMega)) {
+            if (cbMega.isSelected()){
+                mainTraits.get(2).add("Megafauna");
+            } else {
+                mainTraits.get(2).remove("Megafauna");
+            }
+        }
+        else if (e.getSource().equals(cbPeaceful)) {
+            if (cbPeaceful.isSelected()){
+                mainTraits.get(2).add("Peaceful Lands");
+            } else {
+                mainTraits.get(2).remove("Peaceful Lands");
+            }
+        }
+        else if (e.getSource().equals(cbRampantFlora)) {
+            if (cbRampantFlora.isSelected()){
+                mainTraits.get(2).add("Rampant Flora");
+            } else {
+                mainTraits.get(2).remove("Rampant Flora");
+            }
+        }
+        else if (e.getSource().equals(cbRampantUndeath)) {
+            if (cbRampantUndeath.isSelected()){
+                mainTraits.get(2).add("Rampant Undeath");
+            } else {
+                mainTraits.get(2).remove("Rampant Undeath");
+            }
+        }
+        else {
+            if (cbWildlands.isSelected()){
+                mainTraits.get(2).add("Wildlands");
+            } else {
+                mainTraits.get(2).remove("Wildlands");
+            }
+        }
+    }
+
+    @FXML
+    private void setPresenceTrait(ActionEvent e) {
+        if (e.getSource().equals(cbPretender)) {
+            if (cbPretender.isSelected()){
+                mainTraits.get(3).add("Pretender Kings");
+            } else {
+                mainTraits.get(3).remove("Pretender Kings");
+            }
+        }
+        else if (e.getSource().equals(cbDomain)) {
+            if (cbDomain.isSelected()){
+                mainTraits.get(3).add("Domain of the Frost Queen");
+            } else {
+                mainTraits.get(3).remove("Domain of the Frost Queen");
+            }
+        }
+        else if (e.getSource().equals(cbArtisan)) {
+            if (cbArtisan.isSelected()){
+                mainTraits.get(3).add("Artisan Kings");
+            } else {
+                mainTraits.get(3).remove("Artisan Kings");
+            }
+        }
+        else if (e.getSource().equals(cbDruidic)) {
+            if (cbDruidic.isSelected()){
+                mainTraits.get(3).add("Druidic Alliance");
+            } else {
+                mainTraits.get(3).remove("Druidic Alliance");
+            }
+        }
+        else if (e.getSource().equals(cbLibrarian)) {
+            if (cbLibrarian.isSelected()){
+                mainTraits.get(3).add("The Librarian");
+            } else {
+                mainTraits.get(3).remove("The Librarian");
+            }
+        }
+        else if (e.getSource().equals(cbIron)) {
+            if (cbIron.isSelected()){
+                mainTraits.get(3).add("Iron Emperor");
+            } else {
+                mainTraits.get(3).remove("Iron Emperor");
+            }
+        }
+        else if (e.getSource().equals(cbArchon)) {
+            if (cbArchon.isSelected()){
+                mainTraits.get(3).add("Archon Prophet");
+            } else {
+                mainTraits.get(3).remove("Archon Prophet");
+            }
+        }
+        else if (e.getSource().equals(cbDemonPrince)) {
+            if (cbDemonPrince.isSelected()){
+                mainTraits.get(3).add("Demon Prince");
+            } else {
+                mainTraits.get(3).remove("Demon Prince");
+            }
+        }
+        else {
+            if (cbAshen.isSelected()){
+                mainTraits.get(3).add("The Ashen War");
+            } else {
+                mainTraits.get(3).remove("The Ashen War");
+            }
+        }
+    }
+    @FXML
+    private void rollTrait (ActionEvent roll) {
+        Random rand = new Random();
+
+        if (roll.getSource().equals(btnGeo)) {
+            tfGeo.setText(mainTraits.get(0).get(rand.nextInt(mainTraits.get(0).size())));
+        } else if (roll.getSource().equals(btnClimate)) {
+            tfClimate.setText(mainTraits.get(1).get(rand.nextInt(mainTraits.get(1).size())));
+        } else if (roll.getSource().equals(btnInhab)) {
+            tfInhab.setText(mainTraits.get(2).get(rand.nextInt(mainTraits.get(2).size())));
+        } else if (roll.getSource().equals(btnPresence)) {
+            tfPresence.setText(mainTraits.get(3).get(rand.nextInt(mainTraits.get(3).size())));
+        }
 
     }
 
