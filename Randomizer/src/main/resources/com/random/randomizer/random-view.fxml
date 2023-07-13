@@ -57,30 +57,30 @@
                               <Insets left="5.0" />
                            </GridPane.margin>
                         </Label>
-                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1">
+                        <Button fx:id="btnGeo" mnemonicParsing="false" onAction="#rollTrait" text="Roll" GridPane.columnIndex="1">
                            <GridPane.margin>
                               <Insets left="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Button fx:id="btnClimate" mnemonicParsing="false" onAction="#rollTrait" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets left="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <Button fx:id="btnInhab" mnemonicParsing="false" onAction="#rollTrait" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets left="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <Button fx:id="btnPresence" mnemonicParsing="false" onAction="#rollTrait" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets left="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <TextField GridPane.columnIndex="2" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="tfGeo" GridPane.columnIndex="2" />
+                        <TextField fx:id="tfInhab" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="tfPresence" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextField fx:id="tfClimate" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                      </children>
                      <padding>
                         <Insets top="5.0" />
@@ -151,15 +151,15 @@
                                                       <Insets />
                                                    </VBox.margin>
                                                 </Label>
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Barren Oceans" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Coast" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Continents" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Divide" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Islands" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Land" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Lava Divide" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Lava Lakes" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Scarred Divide" />
+                                                <CheckBox fx:id="cbBarren" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Barren Oceans" />
+                                                <CheckBox fx:id="cbCoast" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Coast" />
+                                                <CheckBox fx:id="cbContinents" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Continents" />
+                                                <CheckBox fx:id="cbDivide" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Divide" />
+                                                <CheckBox fx:id="cbIslands" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Islands" />
+                                                <CheckBox fx:id="cbLand" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Land" />
+                                                <CheckBox fx:id="cbLavaDivide" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Lava Divide" />
+                                                <CheckBox fx:id="cbLavaLakes" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Lava Lakes" />
+                                                <CheckBox fx:id="cbScarred" mnemonicParsing="false" onAction="#setGeoTrait" selected="true" text="Scarred Divide" />
                                              </children>
                                              <HBox.margin>
                                                 <Insets left="5.0" top="5.0" />
@@ -168,13 +168,13 @@
                                           <VBox prefWidth="125.0" style="-fx-background-color: d3d3d3;">
                                              <children>
                                                 <Label text="Climate Traits" underline="true" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Desert Realm" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Endless Fields" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Forming Realms" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Frozen Realm" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Highlands" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Overgrown Realm" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Scorched Climate" />
+                                                <CheckBox fx:id="cbDesert" mnemonicParsing="false" onAction="#setClimateTrait" selected="true" text="Desert Realm" />
+                                                <CheckBox fx:id="cbEndless" mnemonicParsing="false" onAction="#setClimateTrait" selected="true" text="Endless Fields" />
+                                                <CheckBox fx:id="cbForming" mnemonicParsing="false" onAction="#setClimateTrait" selected="true" text="Forming Realms" />
+                                                <CheckBox fx:id="cbFrozen" mnemonicParsing="false" onAction="#setClimateTrait" selected="true" text="Frozen Realm" />
+                                                <CheckBox fx:id="cbHigh" mnemonicParsing="false" onAction="#setClimateTrait" selected="true" text="Highlands" />
+                                                <CheckBox fx:id="cbOvergrown" mnemonicParsing="false" onAction="#setClimateTrait" selected="true" text="Overgrown Realm" />
+                                                <CheckBox fx:id="cbScorched" mnemonicParsing="false" onAction="#setClimateTrait" selected="true" text="Scorched Climate" />
                                              </children>
                                              <HBox.margin>
                                                 <Insets left="5.0" top="5.0" />
@@ -193,38 +193,38 @@
                                           <VBox prefWidth="125.0" style="-fx-background-color: d3d3d3;">
                                              <children>
                                                 <Label text="Inhabitants Traits" underline="true" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Astral Invaders" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Demonic Realm" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Dragon Territories" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Immortal Spirits" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Lingering Creators" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Low Population" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Magic Origins" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Megafauna" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Peaceful Lands" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Rampant Flora" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Rampant Undeath" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Wildlands" />
+                                                <CheckBox fx:id="cbAstral" mnemonicParsing="false" onAction="#setInhabTrait" selected="true" text="Astral Invaders" />
+                                                <CheckBox fx:id="cbDemonic" mnemonicParsing="false" onAction="#setInhabTrait" selected="true" text="Demonic Realm" />
+                                                <CheckBox fx:id="cbDragon" mnemonicParsing="false" onAction="#setInhabTrait" selected="true" text="Dragon Territories" />
+                                                <CheckBox fx:id="cbImmortal" mnemonicParsing="false" onAction="#setInhabTrait" selected="true" text="Immortal Spirits" />
+                                                <CheckBox fx:id="cbLingering" mnemonicParsing="false" onAction="#setInhabTrait" selected="true" text="Lingering Creators" />
+                                                <CheckBox fx:id="cbLowPop" mnemonicParsing="false" onAction="#setInhabTrait" selected="true" text="Low Population" />
+                                                <CheckBox fx:id="cbMagic" mnemonicParsing="false" onAction="#setInhabTrait" selected="true" text="Magic Origins" />
+                                                <CheckBox fx:id="cbMega" mnemonicParsing="false" onAction="#setInhabTrait" selected="true" text="Megafauna" />
+                                                <CheckBox fx:id="cbPeaceful" mnemonicParsing="false" onAction="#setInhabTrait" selected="true" text="Peaceful Lands" />
+                                                <CheckBox fx:id="cbRampantFlora" mnemonicParsing="false" onAction="#setInhabTrait" selected="true" text="Rampant Flora" />
+                                                <CheckBox fx:id="cbRampantUndeath" mnemonicParsing="false" onAction="#setInhabTrait" selected="true" text="Rampant Undeath" />
+                                                <CheckBox fx:id="cbWildlands" mnemonicParsing="false" onAction="#setInhabTrait" selected="true" text="Wildlands" />
                                              </children>
                                              <HBox.margin>
-                                                <Insets left="5.0" top="5.0" />
+                                                <Insets bottom="5.0" left="5.0" top="5.0" />
                                              </HBox.margin>
                                           </VBox>
                                           <VBox prefWidth="125.0" style="-fx-background-color: d3d3d3;">
                                              <children>
                                                 <Label text="Presence Traits" underline="true" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Pretender Kings" />
-                                                <CheckBox mnemonicParsing="false" prefWidth="100.0" selected="true" text="Domain of the Frost Queen" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Artisan Kings" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Druidic Alliance" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="The Librarian" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Iron Emperor" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Archon Prophet" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Demon Prince" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="The Ashen War" />
+                                                <CheckBox fx:id="cbPretender" mnemonicParsing="false" onAction="#setPresenceTrait" selected="true" text="Pretender Kings" />
+                                                <CheckBox fx:id="cbDomain" mnemonicParsing="false" onAction="#setPresenceTrait" prefWidth="100.0" selected="true" text="Domain of the Frost Queen" wrapText="true" />
+                                                <CheckBox fx:id="cbArtisan" mnemonicParsing="false" onAction="#setPresenceTrait" selected="true" text="Artisan Kings" />
+                                                <CheckBox fx:id="cbDruidic" mnemonicParsing="false" onAction="#setPresenceTrait" selected="true" text="Druidic Alliance" />
+                                                <CheckBox fx:id="cbLibrarian" mnemonicParsing="false" onAction="#setPresenceTrait" selected="true" text="The Librarian" />
+                                                <CheckBox fx:id="cbIron" mnemonicParsing="false" onAction="#setPresenceTrait" selected="true" text="Iron Emperor" />
+                                                <CheckBox fx:id="cbArchon" mnemonicParsing="false" onAction="#setPresenceTrait" selected="true" text="Archon Prophet" />
+                                                <CheckBox fx:id="cbDemonPrince" mnemonicParsing="false" onAction="#setPresenceTrait" selected="true" text="Demon Prince" />
+                                                <CheckBox fx:id="cbAshen" mnemonicParsing="false" onAction="#setPresenceTrait" selected="true" text="The Ashen War" />
                                              </children>
                                              <HBox.margin>
-                                                <Insets left="5.0" top="5.0" />
+                                                <Insets bottom="5.0" left="5.0" top="5.0" />
                                              </HBox.margin>
                                           </VBox>
                                        </children>
@@ -238,9 +238,6 @@
                                  </padding>
                               </VBox>
                            </children>
-                           <padding>
-                              <Insets left="1.0" />
-                           </padding>
                         </AnchorPane>
                     </content>
                   </Tab>
