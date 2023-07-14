@@ -16,13 +16,17 @@ public class RandomController implements Initializable {
     private CheckBox cbBarren, cbCoast, cbContinents, cbDivide, cbIslands, cbLand, cbLavaDivide, cbLavaLakes, cbScarred,
                      cbDesert, cbEndless, cbForming, cbFrozen, cbHigh, cbOvergrown, cbScorched,
                      cbAstral, cbDemonic, cbDragon, cbImmortal, cbLingering, cbLowPop, cbMagic, cbMega, cbPeaceful, cbRampantFlora, cbRampantUndeath, cbWildlands,
-                     cbPretender, cbDomain, cbArtisan, cbDruidic, cbLibrarian, cbIron, cbArchon, cbDemonPrince, cbAshen;
+                     cbPretender, cbDomain, cbArtisan, cbDruidic, cbLibrarian, cbIron, cbArchon, cbDemonPrince, cbAshen,
+                     cbArctic, cbCrystalline, cbMayhem, cbMassive, cbSmall, cbVolcanic, cbWarping, cbWondrous,
+                     cbBanner, cbCity, cbDistrusting, cbHostile, cbMight, cbNo, cbRuined,
+                     cbDeath, cbDisdain, cbMegacities, cbNoRespite, cbRegen, cbUnderground, cbUnlimited,
+                     cbCurse, cbFrostling, cbGigantism, cbHighMain, cbImmortals, cbLight;
 
     @FXML
-    private TextField tfGeo, tfClimate, tfInhab, tfPresence;
+    private TextField tfGeo, tfClimate, tfInhab, tfPresence, tfMiscOne, tfMiscTwo, tfMiscThree, tfMiscFour;
     
     @FXML
-    private Button btnGeo, btnClimate, btnInhab, btnPresence;
+    private Button btnGeo, btnClimate, btnInhab, btnPresence, btnMiscOne, btnMiscTwo, btnMiscThree, btnMiscFour;
 
     @FXML
     private void setGeoTrait(ActionEvent e) {
@@ -318,6 +322,218 @@ public class RandomController implements Initializable {
             }
         }
     }
+
+    @FXML
+    private void setEnviroTraits(ActionEvent e) {
+        if (e.getSource().equals(cbArctic)) {
+            if (cbAstral.isSelected()){
+                mainTraits.get(4).add("Arctic Blizzards");
+            } else {
+                mainTraits.get(4).remove("Arctic Blizzards");
+            }
+        }
+        else if (e.getSource().equals(cbCrystalline)) {
+            if (cbCrystalline.isSelected()){
+                mainTraits.get(4).add("Crystalline Abundance");
+            } else {
+                mainTraits.get(4).remove("Crystalline Abundance");
+            }
+        }
+        else if (e.getSource().equals(cbMayhem)) {
+            if (cbMayhem.isSelected()){
+                mainTraits.get(4).add("Domain of Mayhem");
+            } else {
+                mainTraits.get(4).remove("Domain of Mayhem");
+            }
+        }
+        else if (e.getSource().equals(cbMassive)) {
+            if (cbMassive.isSelected()){
+                mainTraits.get(4).add("Massive Underground");
+            } else {
+                mainTraits.get(4).remove("Massive Underground");
+            }
+        }
+        else if (e.getSource().equals(cbSmall)) {
+            if (cbSmall.isSelected()){
+                mainTraits.get(4).add("Small Underground");
+            } else {
+                mainTraits.get(4).remove("Small Underground");
+            }
+        }
+        else if (e.getSource().equals(cbVolcanic)) {
+            if (cbVolcanic.isSelected()){
+                mainTraits.get(4).add("Volcanic Eruptions");
+            } else {
+                mainTraits.get(4).remove("Volcanic Eruptions");
+            }
+        }
+        else if (e.getSource().equals(cbWarping)) {
+            if (cbWarping.isSelected()){
+                mainTraits.get(4).add("Warping Wilds");
+            } else {
+                mainTraits.get(4).remove("Warping Wilds");
+            }
+        }
+        else {
+            if (cbWondrous.isSelected()){
+                mainTraits.get(4).add("Wondrous Past");
+            } else {
+                mainTraits.get(4).remove("Wondrous Past");
+            }
+        }
+    }
+
+    @FXML
+    private void setCityTraits(ActionEvent e) {
+        if (e.getSource().equals(cbBanner)) {
+            if (cbBanner.isSelected()){
+                mainTraits.get(5).add("Bannerlords");
+            } else {
+                mainTraits.get(5).remove("Bannerlords");
+            }
+        }
+        else if (e.getSource().equals(cbCity)) {
+            if (cbCity.isSelected()){
+                mainTraits.get(5).add("City States");
+            } else {
+                mainTraits.get(5).remove("City States");
+            }
+        }
+        else if (e.getSource().equals(cbDistrusting)) {
+            if (cbDistrusting.isSelected()){
+                mainTraits.get(5).add("Distrusting Locals");
+            } else {
+                mainTraits.get(5).remove("Distrusting Locals");
+            }
+        }
+        else if (e.getSource().equals(cbHostile)) {
+            if (cbHostile.isSelected()){
+                mainTraits.get(5).add("Hostile Houses");
+            } else {
+                mainTraits.get(5).remove("Hostile Houses");
+            }
+        }
+        else if (e.getSource().equals(cbMight)) {
+            if (cbMight.isSelected()){
+                mainTraits.get(5).add("Might Makes Right");
+            } else {
+                mainTraits.get(5).remove("Might Makes Right");
+            }
+        }
+        else if (e.getSource().equals(cbNo)) {
+            if (cbNo.isSelected()){
+                mainTraits.get(5).add("No Free Cities");
+            } else {
+                mainTraits.get(5).remove("No Free Cities");
+            }
+        }
+        else {
+            if (cbRuined.isSelected()){
+                mainTraits.get(5).add("Ruined Realm");
+            } else {
+                mainTraits.get(5).remove("Ruined Realm");
+            }
+        }
+    }
+
+    @FXML
+    private void setRuleTraits(ActionEvent e) {
+        if (e.getSource().equals(cbDeath)) {
+            if (cbDeath.isSelected()){
+                mainTraits.get(6).add("Deathcasting");
+            } else {
+                mainTraits.get(6).remove("Deathcasting");
+            }
+        }
+        else if (e.getSource().equals(cbDisdain)) {
+            if (cbDisdain.isSelected()){
+                mainTraits.get(6).add("Disdain for Evil");
+            } else {
+                mainTraits.get(6).remove("Disdain for Evil");
+            }
+        }
+        else if (e.getSource().equals(cbMegacities)) {
+            if (cbMegacities.isSelected()){
+                mainTraits.get(6).add("Megacities");
+            } else {
+                mainTraits.get(6).remove("Megacities");
+            }
+        }
+        else if (e.getSource().equals(cbNoRespite)) {
+            if (cbNoRespite.isSelected()){
+                mainTraits.get(6).add("No Respite");
+            } else {
+                mainTraits.get(6).remove("No Respite");
+            }
+        }
+        else if (e.getSource().equals(cbRegen)) {
+            if (cbRegen.isSelected()){
+                mainTraits.get(6).add("Regenerating Infestations");
+            } else {
+                mainTraits.get(6).remove("Regenerating Infestations");
+            }
+        }
+        else if (e.getSource().equals(cbUnderground)) {
+            if (cbUnderground.isSelected()){
+                mainTraits.get(6).add("No Free Cities");
+            } else {
+                mainTraits.get(6).remove("No Free Cities");
+            }
+        }
+        else {
+            if (cbUnlimited.isSelected()){
+                mainTraits.get(6).add("Unlimited Power");
+            } else {
+                mainTraits.get(6).remove("Unlimited Power");
+            }
+        }
+    }
+
+    @FXML
+    private void setUnitTraits(ActionEvent e) {
+        if (e.getSource().equals(cbCurse)) {
+            if (cbCurse.isSelected()){
+                mainTraits.get(7).add("Curse of Undeath");
+            } else {
+                mainTraits.get(7).remove("Curse of Undeath");
+            }
+        }
+        else if (e.getSource().equals(cbFrostling)) {
+            if (cbFrostling.isSelected()){
+                mainTraits.get(7).add("Frostling Influence");
+            } else {
+                mainTraits.get(7).remove("Frostling Influence");
+            }
+        }
+        else if (e.getSource().equals(cbGigantism)) {
+            if (cbGigantism.isSelected()){
+                mainTraits.get(7).add("Gigantism");
+            } else {
+                mainTraits.get(7).remove("Gigantism");
+            }
+        }
+        else if (e.getSource().equals(cbHighMain)) {
+            if (cbHighMain.isSelected()){
+                mainTraits.get(7).add("High Maintenance");
+            } else {
+                mainTraits.get(7).remove("High Maintenance");
+            }
+        }
+        else if (e.getSource().equals(cbImmortals)) {
+            if (cbImmortals.isSelected()){
+                mainTraits.get(7).add("Immortals");
+            } else {
+                mainTraits.get(7).remove("Immortals");
+            }
+        }
+        else {
+            if (cbLight.isSelected()){
+                mainTraits.get(7).add("Lightless");
+            } else {
+                mainTraits.get(7).remove("Lightless");
+            }
+        }
+    }
     @FXML
     private void rollTrait (ActionEvent roll) {
         Random rand = new Random();
@@ -331,7 +547,64 @@ public class RandomController implements Initializable {
         } else if (roll.getSource().equals(btnPresence)) {
             tfPresence.setText(mainTraits.get(3).get(rand.nextInt(mainTraits.get(3).size())));
         }
+    }
 
+    @FXML
+    private void rollMisc (ActionEvent roll) {
+        Random rand = new Random();
+
+        if (roll.getSource().equals(btnMiscOne)) {
+            if (miscOne.getValue().equals("Environmental Effects")) {
+                tfMiscOne.setText(mainTraits.get(4).get(rand.nextInt(mainTraits.get(4).size())));
+            } else if (miscOne.getValue().equals("Free City Modifiers")) {
+                tfMiscOne.setText(mainTraits.get(5).get(rand.nextInt(mainTraits.get(5).size())));
+            } else if (miscOne.getValue().equals("Rule Modifiers")) {
+                tfMiscOne.setText(mainTraits.get(6).get(rand.nextInt(mainTraits.get(6).size())));
+            } else if (miscOne.getValue().equals("Unit Modifiers")) {
+                tfMiscOne.setText(mainTraits.get(7).get(rand.nextInt(mainTraits.get(7).size())));
+            } else {
+                tfMiscOne.setText("None");
+            }
+        }
+        else if (roll.getSource().equals(btnMiscTwo)) {
+            if (miscTwo.getValue().equals("Environmental Effects")) {
+                tfMiscTwo.setText(mainTraits.get(4).get(rand.nextInt(mainTraits.get(4).size())));
+            } else if (miscTwo.getValue().equals("Free City Modifiers")) {
+                tfMiscTwo.setText(mainTraits.get(5).get(rand.nextInt(mainTraits.get(5).size())));
+            } else if (miscTwo.getValue().equals("Rule Modifiers")) {
+                tfMiscTwo.setText(mainTraits.get(6).get(rand.nextInt(mainTraits.get(6).size())));
+            } else if (miscTwo.getValue().equals("Unit Modifiers")) {
+                tfMiscTwo.setText(mainTraits.get(7).get(rand.nextInt(mainTraits.get(7).size())));
+            } else {
+                tfMiscTwo.setText("None");
+            }
+        }
+        else if (roll.getSource().equals(btnMiscThree)) {
+            if (miscThree.getValue().equals("Environmental Effects")) {
+                tfMiscThree.setText(mainTraits.get(4).get(rand.nextInt(mainTraits.get(4).size())));
+            } else if (miscThree.getValue().equals("Free City Modifiers")) {
+                tfMiscThree.setText(mainTraits.get(5).get(rand.nextInt(mainTraits.get(5).size())));
+            } else if (miscThree.getValue().equals("Rule Modifiers")) {
+                tfMiscThree.setText(mainTraits.get(6).get(rand.nextInt(mainTraits.get(6).size())));
+            } else if (miscThree.getValue().equals("Unit Modifiers")) {
+                tfMiscThree.setText(mainTraits.get(7).get(rand.nextInt(mainTraits.get(7).size())));
+            } else {
+                tfMiscThree.setText("None");
+            }
+        }
+        else if (roll.getSource().equals(btnMiscFour)) {
+            if (miscFour.getValue().equals("Environmental Effects")) {
+                tfMiscFour.setText(mainTraits.get(4).get(rand.nextInt(mainTraits.get(4).size())));
+            } else if (miscFour.getValue().equals("Free City Modifiers")) {
+                tfMiscFour.setText(mainTraits.get(5).get(rand.nextInt(mainTraits.get(5).size())));
+            } else if (miscFour.getValue().equals("Rule Modifiers")) {
+                tfMiscFour.setText(mainTraits.get(6).get(rand.nextInt(mainTraits.get(6).size())));
+            } else if (miscFour.getValue().equals("Unit Modifiers")) {
+                tfMiscFour.setText(mainTraits.get(7).get(rand.nextInt(mainTraits.get(7).size())));
+            } else {
+                tfMiscFour.setText("None");
+            }
+        }
     }
 
     @FXML
