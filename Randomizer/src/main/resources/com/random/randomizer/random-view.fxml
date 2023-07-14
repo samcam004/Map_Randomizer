@@ -103,30 +103,30 @@
                         <ChoiceBox fx:id="miscTwo" prefWidth="150.0" GridPane.rowIndex="1" />
                         <ChoiceBox fx:id="miscThree" prefWidth="150.0" GridPane.rowIndex="2" />
                         <ChoiceBox fx:id="miscFour" prefWidth="150.0" GridPane.rowIndex="3" />
-                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1">
+                        <Button fx:id="btnMiscOne" mnemonicParsing="false" onAction="#rollMisc" text="Roll" GridPane.columnIndex="1">
                            <GridPane.margin>
                               <Insets left="5.0" right="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Button fx:id="btnMiscTwo" mnemonicParsing="false" onAction="#rollMisc" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets left="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <Button fx:id="btnMiscThree" mnemonicParsing="false" onAction="#rollMisc" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets left="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <Button fx:id="btnMiscFour" mnemonicParsing="false" onAction="#rollMisc" text="Roll" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets left="5.0" />
                            </GridPane.margin>
                         </Button>
-                        <TextField GridPane.columnIndex="2" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextField fx:id="tfMiscOne" GridPane.columnIndex="2" />
+                        <TextField fx:id="tfMiscTwo" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="tfMiscThree" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="tfMiscFour" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                      </children>
                      <VBox.margin>
                         <Insets left="5.0" right="5.0" top="5.0" />
@@ -252,14 +252,14 @@
                                           <VBox prefWidth="125.0" style="-fx-background-color: d3d3d3;">
                                              <children>
                                                 <Label text="Environmental effects" underline="true" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Arctic Blizzards" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Crystalline Abundance" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Domain of Mayhem" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Massive Underground" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Small Underground" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Volcanic Eruptions" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Warping Wilds" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Wondrous Past" />
+                                                <CheckBox fx:id="cbArctic" mnemonicParsing="false" onAction="#setEnviroTraits" selected="true" text="Arctic Blizzards" />
+                                                <CheckBox fx:id="cbCrystalline" mnemonicParsing="false" onAction="#setEnviroTraits" selected="true" text="Crystalline Abundance" />
+                                                <CheckBox fx:id="cbMayhem" mnemonicParsing="false" onAction="#setEnviroTraits" selected="true" text="Domain of Mayhem" />
+                                                <CheckBox fx:id="cbMassive" mnemonicParsing="false" onAction="#setEnviroTraits" selected="true" text="Massive Underground" wrapText="true" />
+                                                <CheckBox fx:id="cbSmall" mnemonicParsing="false" onAction="#setEnviroTraits" selected="true" text="Small Underground" />
+                                                <CheckBox fx:id="cbVolcanic" mnemonicParsing="false" onAction="#setEnviroTraits" selected="true" text="Volcanic Eruptions" />
+                                                <CheckBox fx:id="cbWarping" mnemonicParsing="false" onAction="#setEnviroTraits" selected="true" text="Warping Wilds" />
+                                                <CheckBox fx:id="cbWondrous" mnemonicParsing="false" onAction="#setEnviroTraits" selected="true" text="Wondrous Past" />
                                              </children>
                                              <opaqueInsets>
                                                 <Insets />
@@ -271,13 +271,13 @@
                                           <VBox prefWidth="125.0" style="-fx-background-color: d3d3d3;">
                                              <children>
                                                 <Label text="Free city modifiers" underline="true" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Bannerlords" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="City States" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Distrusting Locals" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Hostile Houses" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Might Makes Right" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="No Free Cities" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Ruined Realm" />
+                                                <CheckBox fx:id="cbBanner" mnemonicParsing="false" onAction="#setCityTraits" selected="true" text="Bannerlords" />
+                                                <CheckBox fx:id="cbCity" mnemonicParsing="false" onAction="#setCityTraits" selected="true" text="City States" />
+                                                <CheckBox fx:id="cbDistrusting" mnemonicParsing="false" onAction="#setCityTraits" selected="true" text="Distrusting Locals" />
+                                                <CheckBox fx:id="cbHostile" mnemonicParsing="false" onAction="#setCityTraits" selected="true" text="Hostile Houses" />
+                                                <CheckBox fx:id="cbMight" mnemonicParsing="false" onAction="#setCityTraits" selected="true" text="Might Makes Right" />
+                                                <CheckBox fx:id="cbNo" mnemonicParsing="false" onAction="#setCityTraits" selected="true" text="No Free Cities" />
+                                                <CheckBox fx:id="cbRuined" mnemonicParsing="false" onAction="#setCityTraits" selected="true" text="Ruined Realm" />
                                              </children>
                                              <HBox.margin>
                                                 <Insets left="5.0" top="5.0" />
@@ -290,13 +290,13 @@
                                           <VBox prefWidth="125.0" style="-fx-background-color: d3d3d3;">
                                              <children>
                                                 <Label text="Rule modifiers" underline="true" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Deathcasting" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Disdain for Evil" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Megacities" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="No Respite" />
-                                                <CheckBox mnemonicParsing="false" prefWidth="125.0" selected="true" text="Regenerating Infestations" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Underground Start" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Unlimited Power" />
+                                                <CheckBox fx:id="cbDeath" mnemonicParsing="false" onAction="#setRuleTraits" selected="true" text="Deathcasting" />
+                                                <CheckBox fx:id="cbDisdain" mnemonicParsing="false" onAction="#setRuleTraits" selected="true" text="Disdain for Evil" />
+                                                <CheckBox fx:id="cbMegacities" mnemonicParsing="false" onAction="#setRuleTraits" selected="true" text="Megacities" />
+                                                <CheckBox fx:id="cbNoRespite" mnemonicParsing="false" onAction="#setRuleTraits" selected="true" text="No Respite" />
+                                                <CheckBox fx:id="cbRegen" mnemonicParsing="false" onAction="#setRuleTraits" prefWidth="125.0" selected="true" text="Regenerating Infestations" wrapText="true" />
+                                                <CheckBox fx:id="cbUnderground" mnemonicParsing="false" onAction="#setRuleTraits" selected="true" text="Underground Start" />
+                                                <CheckBox fx:id="cbUnlimited" mnemonicParsing="false" onAction="#setRuleTraits" selected="true" text="Unlimited Power" />
                                              </children>
                                              <HBox.margin>
                                                 <Insets top="5.0" />
@@ -305,12 +305,12 @@
                                           <VBox prefWidth="125.0" style="-fx-background-color: d3d3d3;">
                                              <children>
                                                 <Label text="Unit modifiers" underline="true" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Curse of Undeath" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Frostling Influence" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Gigantism" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="High Maintenance" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Immortals" />
-                                                <CheckBox mnemonicParsing="false" selected="true" text="Lightless" />
+                                                <CheckBox fx:id="cbCurse" mnemonicParsing="false" onAction="#setUnitTraits" selected="true" text="Curse of Undeath" />
+                                                <CheckBox fx:id="cbFrostling" mnemonicParsing="false" onAction="#setUnitTraits" selected="true" text="Frostling Influence" />
+                                                <CheckBox fx:id="cbGigantism" mnemonicParsing="false" onAction="#setUnitTraits" selected="true" text="Gigantism" />
+                                                <CheckBox fx:id="cbHighMain" mnemonicParsing="false" onAction="#setUnitTraits" selected="true" text="High Maintenance" />
+                                                <CheckBox fx:id="cbImmortals" mnemonicParsing="false" onAction="#setUnitTraits" selected="true" text="Immortals" />
+                                                <CheckBox fx:id="cbLight" mnemonicParsing="false" onAction="#setUnitTraits" selected="true" text="Lightless" />
                                              </children>
                                              <HBox.margin>
                                                 <Insets left="5.0" top="5.0" />
