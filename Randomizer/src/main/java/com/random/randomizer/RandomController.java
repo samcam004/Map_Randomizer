@@ -552,9 +552,14 @@ public class RandomController implements Initializable {
     @FXML
     private void rollMisc (ActionEvent roll) {
         Random rand = new Random();
+        int any = 0;
 
         if (roll.getSource().equals(btnMiscOne)) {
-            if (miscOne.getValue().equals("Environmental Effects")) {
+            if (miscOne.getValue().equals("Any")) {
+                any = rand.nextInt(4,8);
+                tfMiscOne.setText(mainTraits.get(any).get(rand.nextInt(mainTraits.get(any).size())));
+            }
+            else if (miscOne.getValue().equals("Environmental Effects")) {
                 tfMiscOne.setText(mainTraits.get(4).get(rand.nextInt(mainTraits.get(4).size())));
             } else if (miscOne.getValue().equals("Free City Modifiers")) {
                 tfMiscOne.setText(mainTraits.get(5).get(rand.nextInt(mainTraits.get(5).size())));
@@ -567,7 +572,11 @@ public class RandomController implements Initializable {
             }
         }
         else if (roll.getSource().equals(btnMiscTwo)) {
-            if (miscTwo.getValue().equals("Environmental Effects")) {
+            if (miscTwo.getValue().equals("Any")) {
+                any = rand.nextInt(4,8);
+                tfMiscTwo.setText(mainTraits.get(any).get(rand.nextInt(mainTraits.get(any).size())));
+            }
+            else if (miscTwo.getValue().equals("Environmental Effects")) {
                 tfMiscTwo.setText(mainTraits.get(4).get(rand.nextInt(mainTraits.get(4).size())));
             } else if (miscTwo.getValue().equals("Free City Modifiers")) {
                 tfMiscTwo.setText(mainTraits.get(5).get(rand.nextInt(mainTraits.get(5).size())));
@@ -580,7 +589,11 @@ public class RandomController implements Initializable {
             }
         }
         else if (roll.getSource().equals(btnMiscThree)) {
-            if (miscThree.getValue().equals("Environmental Effects")) {
+            if (miscThree.getValue().equals("Any")) {
+                any = rand.nextInt(4,8);
+                tfMiscThree.setText(mainTraits.get(any).get(rand.nextInt(mainTraits.get(any).size())));
+            }
+            else if (miscThree.getValue().equals("Environmental Effects")) {
                 tfMiscThree.setText(mainTraits.get(4).get(rand.nextInt(mainTraits.get(4).size())));
             } else if (miscThree.getValue().equals("Free City Modifiers")) {
                 tfMiscThree.setText(mainTraits.get(5).get(rand.nextInt(mainTraits.get(5).size())));
@@ -593,7 +606,11 @@ public class RandomController implements Initializable {
             }
         }
         else if (roll.getSource().equals(btnMiscFour)) {
-            if (miscFour.getValue().equals("Environmental Effects")) {
+            if (miscFour.getValue().equals("Any")) {
+                any = rand.nextInt(4,8);
+                tfMiscFour.setText(mainTraits.get(any).get(rand.nextInt(mainTraits.get(any).size())));
+            }
+            else if (miscFour.getValue().equals("Environmental Effects")) {
                 tfMiscFour.setText(mainTraits.get(4).get(rand.nextInt(mainTraits.get(4).size())));
             } else if (miscFour.getValue().equals("Free City Modifiers")) {
                 tfMiscFour.setText(mainTraits.get(5).get(rand.nextInt(mainTraits.get(5).size())));
@@ -619,7 +636,7 @@ public class RandomController implements Initializable {
     @FXML
     private ChoiceBox<String> miscFour;
 
-    private String[] misc = {"None", "Environmental Effects", "Free City Modifiers", "Rule Modifiers", "Unit Modifiers"};
+    private String[] misc = {"None", "Any", "Environmental Effects", "Free City Modifiers", "Rule Modifiers", "Unit Modifiers"};
 
     private ArrayList<ArrayList<String>> mainTraits = new ArrayList<>();
 
